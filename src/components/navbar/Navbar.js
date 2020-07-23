@@ -5,8 +5,8 @@ const Navbar = () =>
   <nav className="navbar">
     <p className="logo">CVfree</p>
     <div>
-      <button>Download</button>
-      <button>Share</button>
+      <button className="nav-button">Download</button>
+      <button className="nav-button">Share</button>
     </div>
   </nav>
 

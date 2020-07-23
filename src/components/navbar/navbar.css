@@ -13,7 +13,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-button {
+.nav-button {
   width: 120px;
   height: 40px;
   background: rgb(200, 8, 8);
@@ -24,7 +24,7 @@ button {
   margin-right: 20px;
 }
 
-button:nth-child(2) {
+.nav-button:nth-child(2) {
   background: rgb(8, 139, 200);
   border: 2px solid rgb(26, 209, 233);
 }

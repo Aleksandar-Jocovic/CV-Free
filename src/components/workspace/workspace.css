@@ -1,5 +1,6 @@
 .workspace {
   width: 80%;
+  padding-top: 100px;
   min-height: 100vh;
   background: rgb(66, 52, 32);
 }

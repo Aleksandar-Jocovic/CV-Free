@@ -1,0 +1,52 @@
+.header {
+  width: 100%;
+  height: 250px;
+  background: rgb(22, 21, 21);
+  padding-top: 100px;
+  text-align: center;
+}
+
+.name, .position {
+  font-family: 'Russo One', sans-serif;
+  font-size: 32px;
+  text-transform: uppercase;
+  color: #fff;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.position {
+    position: relative;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    width: fit-content;
+    padding: 0 5px;
+    margin: 0 auto;
+    font-weight: 600;
+    background: var(--light);
+    z-index: 2;
+    color: var(--dark);
+    text-transform: uppercase;
+}
+
+.position:before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  left: 0;
+  top: 0;
+  transform: translate(-45px, 10px);
+  background: var(--light);
+}
+
+.position:after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  right: 0;
+  top: 0;
+  transform: translate(45px, 10px);
+  background: var(--light);
+}

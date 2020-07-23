@@ -1,5 +1,7 @@
 import React, { useState, Fragment } from 'react'
 
+import './text.css'
+
 const Text = ({ initialValue, textType }) => {
 
   const [edit, setEdit] = useState(false);
@@ -13,7 +15,7 @@ const Text = ({ initialValue, textType }) => {
   return (
     <div>
       {!edit ?
-        <p onClick={handleClick} className={`${textType}`}>{text}</p>
+        <p onClick={handleClick} className={`${textType} editable`}>{text}</p>
         :
         <Fragment>
           <input
@@ -26,12 +28,14 @@ const Text = ({ initialValue, textType }) => {
               console.log(text)
             }}
           />
-          <button onClick={() => {
-            if (text === '') setText('Your Nam');
-            setEdit(!edit)
-            console.log(text)
+          <button
+            className="check-button"
+            onClick={() => {
+              if (text === '') setText('Your Nam');
+              setEdit(!edit)
+              console.log(text)
 
-          }}>go</button>
+            }}>go</button>
         </Fragment>
       }
     </div>
