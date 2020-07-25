@@ -33,8 +33,6 @@ const Text = ({ initialValue, textType }) => {
             onClick={() => {
               if (text === '') setText('Your Nam');
               setEdit(!edit)
-              console.log(text)
-
             }}>go</button>
         </Fragment>
       }

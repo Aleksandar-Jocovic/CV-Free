@@ -11,7 +11,7 @@
 
 ul {
   margin-bottom: 55px;
-  align-self: flex-start;
+  /* align-self: flex-start; */
 }
 ul li {
   list-style: none;
@@ -36,19 +36,91 @@ ul li {
   word-break: break-all;
 }
 
+.link {
+  position: relative;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  border-bottom: 1px solid rgba(32, 38, 49, 0.2);
+  padding: 5px 0;
+  width: 247px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.link .delete-item-button,
+
+.link .edit-item-button  {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  display: none;
+}
+
+.link .edit-item-button {
+  right: 30px;
+}
+
+.links-list .add-item-button {
+  margin: 0 auto;
+  margin-top: 15px;
+  display: none;
+}
+
+.links-list:hover .add-item-button,
+.link:hover .delete-item-button,
+.link:hover .edit-item-button {
+  display: block;
+}
 
 
-.links-list  ul li svg {
+.links-list  .link svg {
   position: relative;
   top: 0px;
   width: 30px;
   height: 30px;
   fill: var(--dark);
 }
-.links-list  ul li a {
+.links-list  .link a {
   position: relative;
   top: 7px;
   color: var(--dark);
   margin-left: 48px;
 }
 
+
+img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
+.add-link-icon {
+  width: 25px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  margin: 15px;
+}
+
+.add-link-icon svg {
+  fill: var(--dark);
+  pointer-events: none;
+}
+
+.addLinkTable {
+  position: relative;
+  background: var(--light);
+  width: 250px;
+  border: 2px solid var(--blue);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px 10px;
+  margin-top: 20px;
+  border-radius: 15px;
+}
+.addLinkTable .delete-item-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
