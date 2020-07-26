@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './mainSection.css'
 import Text from '../text/Text'
 
@@ -6,11 +6,24 @@ const MainSection = () => {
 
   const values = {
     profile: 'About 2 years ago I became interested in web development, so I started learning from online sources. I am very motivated and excited to learn new technologies. I enyoy learning proccess and admire clever solutions programers',
-    title: 'name of work place',
-    position: 'CNC Operater',
-    time: 'Sep 2001 - Oct 2020',
-    description: 'Appple is great factory of mobile phones that are expensive like to expeensive to by by human only.'
+    workplace: 'name of work place',
+    position: 'Job Position',
+    jobTime: 'Mon year - Mon year',
+    jobDescription: 'Job description, what kind of work you done what you have to focus on...',
+    school: 'Name of institution School/College',
+    fieldOfStudy: 'Field of Study',
+    schoolTime: 'Mon year - Mon year',
+    schoolDescription: 'Description of school/college program'
   }
+
+  const [workItemCount, setWorkItemCount] = useState([0, 1])
+  const [educationItemCount, setEducationItemCount] = useState([0, 1])
+
+  // with random number for items
+
+
+
+
   return (
     <section>
       <div className="profile">
@@ -19,7 +32,7 @@ const MainSection = () => {
       </div>
 
       <div className="work">
-        <div className="vertical-line"></div>
+
         <div className="about-me-header">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <path
@@ -28,51 +41,49 @@ const MainSection = () => {
           <h3 className="sectionTitle">Work</h3>
         </div>
 
-        <div className="work-item">
-          <svg className="white-circle" height="15" width="15">
-            <circle cx="7.5" cy="7.5" r="5.5" stroke="rgb(32, 38, 49)" stroke-width="2" fill="rgb(231, 231, 231)" />
-          </svg>
-          <Text initialValue={values.title} textType='work-edu-title' />
-          <div className="work-edu-position-time">
-            <svg height="4" width="4">
-              <circle cx="2" cy="2" r="2" fill="rgb(32, 38, 49)" />
+        <button
+          className="add-item-button"
+          onClick={() => {
+            const id = Math.floor(Math.random() * 100000);
+            setWorkItemCount([...educationItemCount, id])
+          }}
+        >add item
+        </button>
+        {workItemCount.map(item => (
+          <div className="work-item" key={item}>
+            <button
+              className="delete-item-button"
+              value={item}
+              onClick={e => {
+                let newState = workItemCount.filter(item => item !== +e.target.value)
+                setWorkItemCount(newState)
+              }}
+            >x
+            </button>
+            <div className="vertical-line"></div>
+
+            <svg className="white-circle" height="15" width="15">
+              <circle cx="7.5" cy="7.5" r="5.5" stroke="rgb(32, 38, 49)" strokeWidth="2" fill="rgb(231, 231, 231)" />
             </svg>
-            <Text initialValue={values.position} textType="work-edu-position" />
-            <svg height="4" width="4">
-              <circle cx="2" cy="2" r="2" fill="rgb(32, 38, 49)" />
-            </svg>
-            <Text initialValue={values.time} textType="work-edu-time" />
+            <Text initialValue={values.workplace} textType='work-edu-title' />
+            <div className="work-edu-position-time">
+              <svg height="4" width="4">
+                <circle cx="2" cy="2" r="2" fill="rgb(32, 38, 49)" />
+              </svg>
+              <Text initialValue={values.position} textType="work-edu-position" />
+              <svg height="4" width="4">
+                <circle cx="2" cy="2" r="2" fill="rgb(32, 38, 49)" />
+              </svg>
+              <Text initialValue={values.jobTime} textType="work-edu-time" />
+            </div>
+            <div style={{ display: 'flex', marginLeft: '30px' }}>
+              <span>-</span><Text initialValue={values.jobDescription} textType="work-edu-description" />
+            </div>
           </div>
-          <div style={{ display: 'flex', marginLeft: '30px' }}>
-            <span>-</span><Text initialValue={values.description} textType="work-edu-description" />
-          </div>
-        </div>
-
-        <div className="work-item">
-          <svg height="15" width="15">
-            <circle cx="7.5" cy="7.5" r="5.5" stroke="rgb(32, 38, 49)" stroke-width="2" fill="rgb(231, 231, 231)" />
-          </svg>
-          <h4>Ajdaca Alati, Čačak Serbia</h4>
-          <h5>&#8226; CNC Operater &#8226;<span>Sep 2017 - Jan 2020</span></h5>
-          <p>- Ajdača alati is a company engaged in the production and
-          maintenance of tools in which I work as an operator on CNC machines.
-          </p>
-        </div>
-
-        <div className="work-item">
-          <svg height="15" width="15">
-            <circle cx="7.5" cy="7.5" r="5.5" stroke="rgb(32, 38, 49)" stroke-width="2" fill="rgb(231, 231, 231)" />
-          </svg>
-          <div className="vertical-line-mask"></div>
-          <h4>Fabrika Reznog Alata, Čačak Serbia</h4>
-          <h5>&#8226; Machine Operater &#8226;<span>Jun, 2012 - July 2017</span></h5>
-          <p>- Fabrika reznog alata is a state-owned factory tool
-            manufacturing plant where I worked as a machine operator.</p>
-        </div>
-
+        ))}
       </div>
 
-      <div className="work">
+      <div className="work education">
 
         <div className="about-me-header">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -81,14 +92,47 @@ const MainSection = () => {
           </svg>
           <h3 className="sectionTitle">education</h3>
         </div>
+        <button
+          className="add-item-button"
+          onClick={() => {
+            const id = Math.floor(Math.random() * 100000);
+            setEducationItemCount([...educationItemCount, id])
+          }}
+        >add item
+        </button>
+        {educationItemCount.map(item => (
+          <div className="work-item" key={item}>
+            <button
+              className="delete-item-button"
+              value={item}
+              onClick={e => {
+                let newState = educationItemCount.filter(item => item !== +e.target.value)
+                setEducationItemCount(newState)
+              }}
+            >x
+            </button>
+            <div className="vertical-line"></div>
 
-        <div className="work-item">
-          <svg height="15" width="15">
-            <circle cx="7.5" cy="7.5" r="5.5" stroke="rgb(32, 38, 49)" stroke-width="2" fill="rgb(231, 231, 231)" />
-          </svg>
-          <h4>High School Tehnicka Skola Cacak</h4>
-          <h5>&#8226; Automatic Tehnician &#8226;<span>Aug, 2019 - till now</span></h5>
-        </div>
+            <svg className="white-circle" height="15" width="15">
+              <circle cx="7.5" cy="7.5" r="5.5" stroke="rgb(32, 38, 49)" strokeWidth="2" fill="rgb(231, 231, 231)" />
+            </svg>
+            <Text initialValue={values.school} textType='work-edu-title' />
+            <div className="work-edu-position-time">
+              <svg height="4" width="4">
+                <circle cx="2" cy="2" r="2" fill="rgb(32, 38, 49)" />
+              </svg>
+              <Text initialValue={values.fieldOfStudy} textType="work-edu-position" />
+              <svg height="4" width="4">
+                <circle cx="2" cy="2" r="2" fill="rgb(32, 38, 49)" />
+              </svg>
+              <Text initialValue={values.schoolTime} textType="work-edu-time" />
+            </div>
+            <div style={{ display: 'flex', marginLeft: '30px' }}>
+              <span>-</span><Text initialValue={values.schoolDescription} textType="work-edu-description" />
+            </div>
+          </div>
+        ))}
+
       </div>
 
       <div className="skills">

@@ -25,14 +25,13 @@ section {
   padding-left: 30px;
 }
 .work-edu-title {
-  padding-left: 30px;
+  width: fit-content;
+  margin: 0 0 5px 30px;
   opacity: 0.9;
-  margin-bottom: 5px;
   font-size: 15px;
   text-transform: uppercase;
   font-family: 'Poppins', sans-serif;
   color: var(--dark);
-  margin-bottom: 5px;
   font-weight: 800;
 }
 .work-edu-description {
@@ -53,6 +52,9 @@ section {
   left: 0px;
   z-index: 3;
 }
+
+
+
 .work-edu-position {
   font-family: 'Poppins', sans-serif;
   color: var(--dark);
@@ -98,10 +100,36 @@ section {
 
 .vertical-line {
   position: absolute;
-  top: 65px;
+  top: 16px;
   left: 6px;
   width: 2px;
   height: 100%;
   background: var(--dark);
   z-index: 0;
 }
+
+.work .work-item:nth-last-child(1) .vertical-line {
+  display: none !important;
+}
+
+.work-item .delete-item-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: none;
+}
+
+.education .add-item-button,
+.work .add-item-button {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.education:hover .add-item-button,
+.work:hover .add-item-button,
+.work-item:hover .delete-item-button {
+  display: block;
+}
+
+
