@@ -2,7 +2,7 @@ import React from 'react'
 import Text from '../text/Text'
 import Header from './Header'
 import SideInfo from './SideInfo'
-
+import MainSection from './MainSection'
 import './cv.css'
 
 const Cv = () => {
@@ -10,7 +10,10 @@ const Cv = () => {
   return (
     <div className="pdf">
       <Header />
-      <SideInfo />
+      <div style={{ display: 'flex' }}>
+        <SideInfo />
+        <MainSection />
+      </div>
     </div>
   )
 }
