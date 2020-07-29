@@ -22,8 +22,8 @@ const Link = ({ link, setLinks, deleteLinkItem, links }) => {
       {!editLink ?
         <a
           href={`${link.url}`}
-          rel="noreferrer"
           target="_blank"
+          rel="noopener noreferrer"
           onClick={() => { }}
         >
           {link.text}
