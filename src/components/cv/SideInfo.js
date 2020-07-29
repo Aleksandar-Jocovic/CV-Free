@@ -1,7 +1,8 @@
-import React, { useState, Fragment } from 'react'
+import React, { useState, Fragment, useRef } from 'react'
 import Text from '../text/Text'
 import Link from './Link.js'
 import './sideInfo.css'
+
 
 const SideInfo = () => {
 
@@ -67,9 +68,21 @@ const SideInfo = () => {
   ])
 
   const [chosedLinks, setChosedLinks] = useState([0, 1, 2]);
-  const [addLink, setAddLink] = useState(true)
+  const [addLink, setAddLink] = useState(false)
 
 
+  // fake click to style button
+  const realFileBtn = useRef();
+
+  const uploadImage = () => {
+    realFileBtn.current.click()
+    document.querySelector('input[type="file"]').addEventListener('change', function () {
+      if (this.files && this.files[0]) {
+        var img = document.querySelector('img');
+        img.src = URL.createObjectURL(this.files[0]);
+      }
+    });
+  }
 
 
   const addItemToChosedLinks = e => {
@@ -96,6 +109,16 @@ const SideInfo = () => {
 
   return (
     <div className="sideInfo">
+
+      <div className="image">
+        <img src="./profile.png" alt="" />
+        <input type="file" ref={realFileBtn} />
+        <button
+          className="custom-file-button"
+          onClick={uploadImage}
+        >Upload Image
+        </button>
+      </div>
       <div className="info-list">
         <h3 className="sectionTitle">Personal</h3>
         <ul>

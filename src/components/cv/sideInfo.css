@@ -1,5 +1,5 @@
 .sideInfo {
-  padding: 30px 23px;
+  padding: 23px 23px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -93,6 +93,47 @@ img {
   border-radius: 50%;
   margin-bottom: 30px;
 }
+
+.image {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  background: url('../../img/profile.png') center top /cover;
+}
+
+
+
+.custom-file-button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2px 5px;
+  background: var(--blue) !important;
+  border: 2px solid var(--blue-light);
+  color: white;
+  font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+}
+
+img:hover  .custom-file-button,
+.image:hover  .custom-file-button {
+  display: block;
+}
+
+.image input {
+  display: none !important;
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  left: 1999px;
+}
+
 
 .add-link-icon {
   width: 25px;

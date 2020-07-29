@@ -26,9 +26,10 @@
   cursor: pointer;
 }
 
+#file-upload-button,
 .edit-item-button {
   padding: 0px 5px;
-  background: var(--blue);
+  background: var(--blue) !important;
   border: 2px solid var(--blue-light);
   color: white;
   font-size: 15px;
