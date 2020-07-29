@@ -1,4 +1,4 @@
-import React, { useState, Fragment, useRef } from 'react'
+import React, { useState, useRef } from 'react'
 import Text from '../text/Text'
 import Link from './Link.js'
 import './sideInfo.css'
