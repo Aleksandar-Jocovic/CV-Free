@@ -86,9 +86,9 @@ const SideInfo = () => {
 
 
   const addItemToChosedLinks = e => {
-    console.log(e.target.name)
-
     setChosedLinks([...chosedLinks, +e.target.name])
+    console.log(document.getElementById('img').src)
+
   }
 
   const deleteLinkItem = e => {
@@ -111,7 +111,7 @@ const SideInfo = () => {
     <div className="sideInfo">
 
       <div className="image">
-        <img src="./profile.png" alt="" />
+        <img src="./profile.png" alt="" id="img" />
         <input type="file" ref={realFileBtn} />
         <button
           className="custom-file-button"
