@@ -37,3 +37,10 @@ main {
   display: flex;
 }
 
+
+.cir {
+  width: 20px;
+  height: 20px;
+  background: var(--dark);
+  border-radius: 50%;
+}
