@@ -53,6 +53,17 @@ section {
   z-index: 3;
 }
 
+.cube {
+    position: absolute;
+  top: 6px;
+  left: 2px;
+  z-index: 3;
+  background: var(--light);
+  border: 2px solid var(--dark);
+  width: 10px;
+  height: 10px;
+
+}
 
 
 .work-edu-position {
@@ -70,11 +81,13 @@ section {
   margin-left: 30px;
 }
 
-.work-edu-position-time svg {
+.cube-sm{
   position: relative;
   top: 7px;
   margin: 0 5px;
-  fill: var(--dark);
+  width: 4px;
+  height: 4px;
+  background: var(--dark);
 }
 .work-edu-time {
   font-family: 'Poppins', sans-serif;
@@ -112,12 +125,14 @@ section {
   display: none !important;
 }
 
+.skills-item .delete-item-button,
 .work-item .delete-item-button {
   position: absolute;
   right: 0;
   top: 0;
   display: none;
 }
+
 
 .education .add-item-button,
 .work .add-item-button {
@@ -126,6 +141,8 @@ section {
   right: 0;
   bottom: 0;
 }
+.skills:hover .add-item-button,
+.skills-item:hover .delete-item-button,
 .education:hover .add-item-button,
 .work:hover .add-item-button,
 .work-item:hover .delete-item-button {
@@ -133,3 +150,85 @@ section {
 }
 
 
+
+.skills {
+  margin-top: 0px;
+  position: relative;
+}
+
+.skills svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--dark);
+    position: relative;
+    top: 25px;
+}
+.skills  h3 {
+     padding-left: 30px;
+}
+.skill {
+  width: fit-content;
+  margin: 0 0 5px 0px;
+  opacity: 0.9;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  color: var(--dark);
+  font-weight: 800;
+}
+
+
+.skills-items {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  margin-left: 20px;
+}
+
+
+
+.skills-item {
+  margin-bottom: 10px;
+  position: relative;
+  /* height: 50px; */
+}
+
+.skills-item .delete-item-button {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  display: none;
+}
+
+.skills .add-item-button {
+  position: relative;
+  display: none;
+  float: right;
+}
+
+.skill-input {
+  width: 120px;
+  margin: 4px 0px;
+  display: none;
+}
+
+.skills-item:hover .skill-input {
+  display: block;
+}
+
+.progress-bar {
+  position: relative;
+  width: 80%;
+  height: 10px;
+  border: 1px solid var(--dark);
+  overflow: hidden;
+}
+
+.progress {
+  content: '';
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--dark);
+}

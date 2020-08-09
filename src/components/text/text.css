@@ -8,8 +8,11 @@
   color: #fff;
 }
 
-input {
-  padding: 5px;
+textarea {
+
   border-radius: 5px;
-  border: 1px solid rgb(8, 139, 200);
+  font-size: 15px ;
+  font-family: 'Poppins', sans-serif;
+  color: var(--dark);
+  line-height: 18px;
 }
