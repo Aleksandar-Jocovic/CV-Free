@@ -3,10 +3,10 @@ import './navbar.css'
 
 const Navbar = () =>
   <nav className="navbar">
-    <p className="logo">CVfree</p>
+    <p className="logo"><span>c</span><span>v</span>FREE</p>
     <div>
-      <button className="nav-button">Download</button>
-      <button className="nav-button">Share</button>
+      {/* <button className="nav-button">Download</button>
+      <button className="nav-button">Share</button> */}
     </div>
   </nav>
 

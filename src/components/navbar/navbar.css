@@ -1,5 +1,5 @@
 .navbar {
-  background: rgb(3, 29, 54);
+  background: rgb(235, 239, 243);
   height: 70px;
   display: flex;
   justify-content: space-between;
@@ -8,9 +8,23 @@
 
 .logo {
   margin-left: 20px;
-  font-size: 34px;
-  color: white;
+  font-size: 18px;
+  color: rgb(12, 12, 12);
   font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  position: relative;
+  top: -2px;
+}
+
+
+.logo span {
+  font-size: 44px;
+  font-weight: 800;
+  color: rgb(27, 202, 27);
+}
+.logo span:nth-child(1) {
+  position: relative;
+  right: -3px;
 }
 
 .nav-button {
@@ -28,3 +42,4 @@
   background: rgb(8, 139, 200);
   border: 2px solid rgb(26, 209, 233);
 }
+

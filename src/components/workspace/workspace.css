@@ -1,6 +1,9 @@
 .workspace {
   width: 80%;
-  padding-top: 10px;
+  padding: 10px 0 0 40px;
   min-height: 100vh;
   background: rgb(141, 173, 214);
+  background: url("../../img/pattern.jpg");
+  background-position-x: left;
+  background-repeat: repeat;
 }

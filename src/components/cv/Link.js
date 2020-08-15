@@ -1,6 +1,6 @@
 import React, { useState, Fragment } from 'react'
 
-const Link = ({ link, setLinks, deleteLinkItem, links }) => {
+const Link = ({ link, setLinks, deleteLinkItem, links, displayLinks }) => {
   const [editLink, setEditLink] = useState(false)
 
   const [linkURL, setLinkURL] = useState(link.url)
@@ -17,7 +17,7 @@ const Link = ({ link, setLinks, deleteLinkItem, links }) => {
 
 
   return (
-    <div key={link.text} className="link">
+    <div key={link.text} className="link" id={link.id}>
       {link.icon}
       {!editLink ?
         <a
@@ -26,7 +26,7 @@ const Link = ({ link, setLinks, deleteLinkItem, links }) => {
           rel="noopener noreferrer"
           onClick={() => { }}
         >
-          {link.text}
+          {displayLinks ? link.text : ''}
         </a>
         :
         <Fragment>

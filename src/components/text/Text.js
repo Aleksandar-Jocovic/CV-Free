@@ -12,19 +12,25 @@ const Text = ({ initialValue, textType }) => {
   const handleClick = () => {
     setInputStyle({
       height: `${textElement.current.clientHeight}px`,
-      width: `${textElement.current.clientWidth}px`
+      width: `${textElement.current.clientWidth + 20}px`
     })
     if (!edit) setEdit(!edit);
   }
 
   const textElement = useRef(null)
+  const textArea = useRef(null)
 
 
 
   //close input on outside clikc
   window.addEventListener('click', (e) => {
     if (e.target.tagName !== "P" && e.target.tagName !== "TEXTAREA" && edit) {
-      if (text === '') setText('Your Nam');
+      console.log(text)
+      /* console.log(textArea.current.value) */
+      if (text.length < 1) {
+        setText('default')
+        console.log('defa')
+      };
       setEdit(!edit)
     }
   })
@@ -41,6 +47,7 @@ const Text = ({ initialValue, textType }) => {
         :
         <Fragment>
           <textarea
+            ref={textArea}
             className={`${textType}`}
             type="text"
             value={text}
@@ -48,6 +55,9 @@ const Text = ({ initialValue, textType }) => {
             style={inputStyle}
             onChange={e => {
               setText(e.target.value);
+              // if (e.target.value === '') {
+              //   setText('opa')
+              // }
               console.log(text)
             }}
           />
