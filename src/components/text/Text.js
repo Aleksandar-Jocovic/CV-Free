@@ -22,15 +22,22 @@ const Text = ({ initialValue, textType }) => {
 
 
 
+
+  const getInputValue = () => {
+    if (text === '' || text === undefined) {
+      return "default"
+    } else { return text }
+  }
+
+
+
   //close input on outside clikc
   window.addEventListener('click', (e) => {
-    if (e.target.tagName !== "P" && e.target.tagName !== "TEXTAREA" && edit) {
-      console.log(text)
-      /* console.log(textArea.current.value) */
-      if (text.length < 1) {
-        setText('default')
-        console.log('defa')
-      };
+    if (
+      e.target.tagName !== "P"
+      && e.target.tagName !== "TEXTAREA"
+      && edit
+    ) {
       setEdit(!edit)
     }
   })
@@ -42,7 +49,7 @@ const Text = ({ initialValue, textType }) => {
           ref={textElement}
           onClick={handleClick}
           className={`${textType} editable`}
-        >{text}
+        >{text ? text : initialValue}
         </p>
         :
         <Fragment>

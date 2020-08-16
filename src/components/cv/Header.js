@@ -13,10 +13,15 @@ const Header = () => {
         initialValue={name}
         textType="name"
       />
-      <Text
-        initialValue={position}
-        textType="position"
-      />
+      <div className="position-wrap">
+        <div className="dash-on-position"></div>
+        <Text
+          initialValue={position}
+          textType="position"
+        />
+        <div className="dash-on-position"></div>
+      </div>
+
     </div>
   )
 }

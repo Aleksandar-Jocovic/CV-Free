@@ -13,6 +13,7 @@ function App() {
         <WorkSpace />
         <SideBar />
       </div>
+      <footer>2020 copright CV free</footer>
     </div >
   );
 }
@@ -22,12 +23,12 @@ export default App;
 
 
 
-    //page splitt, icons circles, link icons, skill, add item fail to add on work and edu,
-  // line on your position misssing, gmail to long get over text
+    //page splitt, add item fail to add on work and edu,
+  // gmail to long get over text
   // adjust work edu icons
+
   //when addign more links they drop down to mach and work/edu links alsow 
 
-  // kada se obrise sve iz inputa onda ostaje your nam do kraja bag neki 
 
 
 

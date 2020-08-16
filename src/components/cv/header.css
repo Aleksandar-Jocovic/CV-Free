@@ -1,7 +1,7 @@
 .header {
   width: 100%;
   height: 250px;
-  background: rgb(22, 21, 21);
+  background: var(--dark);
   padding-top: 100px;
   text-align: center;
 }
@@ -29,24 +29,16 @@
     text-transform: uppercase;
 }
 
-.position:before {
-  content: '';
-  position: absolute;
-  width: 30px;
-  height: 4px;
-  left: 0;
-  top: 0;
-  transform: translate(-45px, 10px);
-  background: var(--light);
+.position-wrap {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  margin: 0 auto; 
 }
 
-.position:after {
-  content: '';
-  position: absolute;
+.dash-on-position {
   width: 30px;
   height: 4px;
-  right: 0;
-  top: 0;
-  transform: translate(45px, 10px);
   background: var(--light);
+  margin: 0 20px;
 }

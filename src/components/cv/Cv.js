@@ -80,8 +80,8 @@ const Cv = () => {
     iconData.src = iconPath
 
     var icon = document.getElementById(element).getBoundingClientRect();
-    var iconTop = icon.top / 5.1 + correctionTop;
-    var iconLeft = icon.left / 3.8;
+    var iconTop = icon.top / 4.8 + correctionTop;
+    var iconLeft = icon.left / 4.2;
     doc.addImage(iconData, 'png', iconLeft, iconTop, 5, 5)
   }
 
@@ -91,8 +91,8 @@ const Cv = () => {
     iconData.src = iconPath
 
     var icon = document.getElementById(element).getBoundingClientRect();
-    var iconTop = icon.top / 4.3 + correctionTop;
-    var iconLeft = icon.left / 2.2;
+    var iconTop = icon.top / 4.07 + correctionTop;
+    var iconLeft = icon.left / 5.1;
     doc.addImage(iconData, 'png', iconLeft, iconTop, 6, 6)
     doc.textWithLink(links[+element].text, iconLeft + 15, iconTop + 5, { url: links[+element].url, zoom: -1 })
   }
@@ -106,6 +106,7 @@ const Cv = () => {
     setDisplayLinks(false)
 
     doc.addHTML(document.getElementById('pdf'), async function () {
+      //add a profile img
       doc.addImage(img, 'JPEG', 12, 67, 50, 50)
 
       positionWorkEduIcon("work-svg", "img/work.png", 6)

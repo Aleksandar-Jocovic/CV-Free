@@ -1,6 +1,6 @@
 .workspace {
   width: 80%;
-  padding: 10px 0 0 40px;
+  padding: 10px 0 40px 40px;
   min-height: 100vh;
   background: rgb(141, 173, 214);
   background: url("../../img/pattern.jpg");

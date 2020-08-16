@@ -36,3 +36,12 @@
   border-radius: 5px;
   cursor: pointer;
 }
+
+footer {
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  background: black;
+  color: wheat;
+  font-family: 'Poppins', sans-serif;
+}
