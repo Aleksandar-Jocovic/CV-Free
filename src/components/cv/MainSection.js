@@ -51,7 +51,7 @@ const MainSection = () => {
           className="add-item-button"
           onClick={() => {
             const id = Math.floor(Math.random() * 100000);
-            setWorkItemCount([...educationItemCount, id])
+            setWorkItemCount([...workItemCount, id])
           }}
         >add item
         </button>
@@ -100,7 +100,7 @@ const MainSection = () => {
         >add item
         </button>
         {educationItemCount.map(item => (
-          <div className="work-item" key={item}>
+          <div className="edu-item" key={item}>
             <button
               className="delete-item-button"
               value={item}

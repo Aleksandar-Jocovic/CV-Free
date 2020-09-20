@@ -74,10 +74,11 @@ const Cv = () => {
   const [displayLinks, setDisplayLinks] = useState(true)
   var doc = new jsPDF();
 
-  // add education and work skill icon 
+  // add education work skill icon 
   const positionWorkEduIcon = (element, iconPath, correctionTop) => {
     var iconData = new Image()
     iconData.src = iconPath
+
 
     var icon = document.getElementById(element).getBoundingClientRect();
     var iconTop = icon.top / 4.8 + correctionTop;
@@ -107,7 +108,7 @@ const Cv = () => {
 
     doc.addHTML(document.getElementById('pdf'), async function () {
       //add a profile img
-      doc.addImage(img, 'JPEG', 12, 67, 50, 50)
+      //doc.addImage(img, 'JPEG', 12, 67, 50, 50)
 
       positionWorkEduIcon("work-svg", "img/work.png", 6)
       positionWorkEduIcon("education-svg", "img/edu.png", 20)
@@ -126,7 +127,8 @@ const Cv = () => {
   }
 
   const save = () => {
-    console.log(document.getElementById("link-items").childNodes[0].id)
+    const elementItems = document.querySelectorAll('.work-item')
+    console.log(elementItems.length)
   }
 
   return (

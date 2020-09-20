@@ -17,7 +17,6 @@ section {
 
 .work {
   width: 100%;
-  overflow: hidden;
   position: relative;
   margin-bottom: 3px;
 }
@@ -42,7 +41,8 @@ section {
   color: red; */
 }
 
-.work-item {
+.work-item,
+.edu-item {
   margin-bottom: 10px;
   position: relative;
 }
@@ -126,7 +126,8 @@ section {
 }
 
 .skills-item .delete-item-button,
-.work-item .delete-item-button {
+.work-item .delete-item-button,
+.edu-item .delete-item-button {
   position: absolute;
   right: 0;
   top: 0;
@@ -138,14 +139,16 @@ section {
 .work .add-item-button {
   display: none;
   position: absolute;
+  z-index: 100;
   right: 0;
-  bottom: 0;
+  bottom: -28px;
 }
 .skills:hover .add-item-button,
 .skills-item:hover .delete-item-button,
 .education:hover .add-item-button,
 .work:hover .add-item-button,
-.work-item:hover .delete-item-button {
+.work-item:hover .delete-item-button,
+.edu-item:hover .delete-item-button {
   display: block;
 }
 
