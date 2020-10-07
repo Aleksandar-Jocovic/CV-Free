@@ -7,5 +7,4 @@ const WorkSpace = () =>
     <Cv />
   </div>
 
-
 export default WorkSpace
