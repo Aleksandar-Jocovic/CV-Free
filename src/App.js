@@ -23,10 +23,9 @@ export default App;
 
 
 
-    //page splitt, add item fail to add on work and edu,
+  //page splitt
   // gmail to long get over text
   // adjust work edu icons
-
   //when addign more links they drop down to mach and work/edu links alsow 
 
 

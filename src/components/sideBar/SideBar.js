@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './sideBar.css'
+import { img } from '../../img/template.png'
 const SideBar = () => {
 
   const [activeColor, setActiveColor] = useState('rgb(53, 25, 25)')
@@ -67,10 +68,8 @@ const SideBar = () => {
           onClick={e => changeTemplateColor(e, 'rgb(66, 126, 10)')}
         ></button>
       </div>
-      <img src="img/template.png" className="active-template" />
-      <img src="img/template.png" className="unavilable-template" />
-      <img src="img/template.png" className="unavilable-template" />
-      <img src="img/template.png" className="unavilable-template" />
+      <img src="../../img/template.png" alt="template" className="active-template" />
+
     </div>
   )
 }

@@ -1,15 +1,15 @@
-import React, { useState, Fragment } from 'react'
+import React, { useState } from 'react'
 import './mainSection.css'
 import Text from '../text/Text'
 
 const MainSection = () => {
 
   const values = {
-    profile: 'About 2 years ago I became interested in web development, so I started learning from online sources. I am very motivated and excited to learn new technologies. I enyoy learning proccess and admire clever solutions programers',
+    profile: 'Your summary, somthing about you, your work and experience.',
     workplace: 'name of work place',
     position: 'Job Position',
     jobTime: 'Mon year - Mon year',
-    jobDescription: 'Job description, what kind of work you done what you have to focus on...',
+    jobDescription: 'Job description, what kind of work you done, and what you have to focus on...',
     school: 'Name of institution School/College',
     fieldOfStudy: 'Field of Study',
     schoolTime: 'Mon year - Mon year',
@@ -24,11 +24,7 @@ const MainSection = () => {
     { id: 2, value: 60 },
   ])
 
-
   // with random number for items
-
-
-
 
   return (
     <section>
@@ -182,7 +178,6 @@ const MainSection = () => {
           }}
         >add item
         </button>
-        {/*   <h4>Skills i'm familiar with and learning at the moment: Node.js, Express, MongoDb,</h4> */}
       </div>
     </section>
   )

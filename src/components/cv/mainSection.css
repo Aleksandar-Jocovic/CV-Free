@@ -36,10 +36,6 @@ section {
 .work-edu-description {
   padding-left: 5px;
 }
-.work-item span {
-/*   display: inline-block;
-  color: red; */
-}
 
 .work-item,
 .edu-item {
@@ -121,7 +117,8 @@ section {
   z-index: 0;
 }
 
-.work .work-item:nth-last-child(1) .vertical-line {
+.work .work-item:nth-last-child(1) .vertical-line,
+.education .edu-item:nth-last-child(1) .vertical-line {
   display: none !important;
 }
 
