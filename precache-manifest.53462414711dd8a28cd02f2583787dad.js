@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cf1957536007fc9a8067d1432117cb41",
+    "revision": "2dc28e7e6ebdd51553d6f0beabca07df",
     "url": "/CV-Free/index.html"
   },
   {
-    "revision": "a02df3fbb32f336acc32",
-    "url": "/CV-Free/static/css/main.2eda2d74.chunk.css"
+    "revision": "2193eee8fb9fd73a4362",
+    "url": "/CV-Free/static/css/main.1853c3ee.chunk.css"
   },
   {
-    "revision": "89a9d61ce49e365e0f04",
-    "url": "/CV-Free/static/js/2.669c2e0d.chunk.js"
+    "revision": "61d404179ff0258ef3f2",
+    "url": "/CV-Free/static/js/2.7ae8beea.chunk.js"
   },
   {
     "revision": "ef1c1dc921eb892faf80c713a1f15928",
-    "url": "/CV-Free/static/js/2.669c2e0d.chunk.js.LICENSE.txt"
+    "url": "/CV-Free/static/js/2.7ae8beea.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a02df3fbb32f336acc32",
-    "url": "/CV-Free/static/js/main.ab67d394.chunk.js"
+    "revision": "2193eee8fb9fd73a4362",
+    "url": "/CV-Free/static/js/main.63126a29.chunk.js"
   },
   {
     "revision": "af285f57b98b5b5168c3",
