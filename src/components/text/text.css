@@ -9,10 +9,13 @@
 }
 
 textarea {
-
   border-radius: 5px;
   font-size: 15px ;
   font-family: 'Poppins', sans-serif;
   color: var(--dark);
   line-height: 18px;
+}
+
+p {
+  word-break: normal;
 }

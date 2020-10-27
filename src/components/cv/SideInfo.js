@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react'
 import Text from '../text/Text'
 import Link from './Link.js'
+import profileImage from '../../img/profile.png'
 import './sideInfo.css'
 
 
@@ -37,12 +38,12 @@ const SideInfo = ({ links, setLinks, displayLinks }) => {
 
   const values = {
     name: 'Your name',
-    dateOfBirth: '1st march 1998',
-    nationality: 'Niggerian',
-    languages: 'Serbian Englis',
-    mobile: '+323 23 23',
-    email: 'mike1234567890@gmail.com',
-    address: 'adress 22 22',
+    dateOfBirth: '1st May 1999.',
+    nationality: 'Your Nationality',
+    languages: 'Serbian English',
+    mobile: '+323 23 23 23',
+    email: 'mike10@gmail.com',
+    address: 'adress 22/22',
     skype: 'skype: 3232'
   }
 
@@ -50,7 +51,7 @@ const SideInfo = ({ links, setLinks, displayLinks }) => {
     <div className="sideInfo">
 
       <div className="image">
-        <img src="./profile.png" alt="profile image" id="img" />
+        <img src={profileImage} alt="profile image" id="img" />
         <input type="file" ref={realFileBtn} />
         <button
           className="custom-file-button"
@@ -61,16 +62,16 @@ const SideInfo = ({ links, setLinks, displayLinks }) => {
       <div className="info-list">
         <h3 className="sectionTitle">Personal</h3>
         <ul>
-          <li>Name<p className='fakeBlankSpace'>..</p>
+          <li>Name<p className='fakeBlankSpace'>..............</p>
             <Text initialValue={values.name} textType="listText" />
           </li>
-          <li>Birthday<p className='fakeBlankSpace'>.....</p>
+          <li>Birthday<p className='fakeBlankSpace'>..........</p>
             <Text initialValue={values.dateOfBirth} textType="listText" />
           </li>
-          <li>Nationality<p className='fakeBlankSpace'>.</p>
+          <li>Nationality<p className='fakeBlankSpace'>....</p>
             <Text initialValue={values.nationality} textType="listText" />
           </li>
-          <li>Languages
+          <li>Languages<p className='fakeBlankSpace'>...</p>
             <Text initialValue={values.languages} textType="listText" />
           </li>
         </ul>
@@ -79,16 +80,16 @@ const SideInfo = ({ links, setLinks, displayLinks }) => {
       <div className="contact-list">
         <h3 className="sectionTitle">Contact</h3>
         <ul>
-          <li>Mobile<p className='fakeBlankSpace'>.....</p>
+          <li>Mobile<p className='fakeBlankSpace'>............</p>
             <Text initialValue={values.mobile} textType="listText" />
           </li>
-          <li>Email<p className='fakeBlankSpace'>.....</p>
+          <li>Email<p className='fakeBlankSpace'>..............</p>
             <Text initialValue={values.email} textType="listText" />
           </li>
-          <li>Skype<p className='fakeBlankSpace'>.....</p>
+          <li>Skype<p className='fakeBlankSpace'>..............</p>
             <Text initialValue={values.skype} textType="listText" />
           </li>
-          <li>Adress<p className='fakeBlankSpace'>.....</p>
+          <li>Adress<p className='fakeBlankSpace'>............</p>
             <Text initialValue={values.address} textType="listText" />
           </li>
         </ul>

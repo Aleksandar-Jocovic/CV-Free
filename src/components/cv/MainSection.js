@@ -5,7 +5,7 @@ import Text from '../text/Text'
 const MainSection = () => {
 
   const values = {
-    profile: 'Your summary, somthing about you, your work and experience.',
+    profile: 'This is your summary section, write something about you, your work, experience, education, interest. In general your resume summary.',
     workplace: 'name of work place',
     position: 'Job Position',
     jobTime: 'Mon year - Mon year',

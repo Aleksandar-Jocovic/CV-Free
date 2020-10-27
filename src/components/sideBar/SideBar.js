@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import './sideBar.css'
-import { img } from '../../img/template.png'
+import template from '../../img/template.png'
 const SideBar = () => {
 
-  const [activeColor, setActiveColor] = useState('rgb(53, 25, 25)')
+  const [activeColor, setActiveColor] = useState('rgb(32, 38, 49)')
 
 
   let root = document.documentElement;
@@ -68,7 +68,7 @@ const SideBar = () => {
           onClick={e => changeTemplateColor(e, 'rgb(66, 126, 10)')}
         ></button>
       </div>
-      <img src="../../img/template.png" alt="template" className="active-template" />
+      <img src={template} alt="template" className="active-template" />
 
     </div>
   )
